@@ -108,7 +108,7 @@ const Navbar: React.FC<Props> = () => {
         </div>
         <div className="md:hidden w-1/4 text-right animate-fadeInBasic">
           <Button
-            className="bg-secondary hover:bg-secondary active:bg-secondary focus:bg-secondary"
+            className="bg-emerald-green hover:bg-emerald-green active:bg-emerald-green focus:bg-emerald-green"
             onClick={onOpenDrawer}
           >
             <MenuOutlined
