@@ -1,0 +1,23 @@
+.homepage-container {
+  @apply w-full h-full p-2 sm:p-4 m-auto;
+  /* @apply w-full h-full m-auto; */
+  max-width: 1440px;
+}
+
+.vision-title {
+  @apply text-3xl font-extrabold;
+
+  @apply bg-lush-green;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.features-title {
+  @apply text-3xl text-center font-extrabold;
+
+  @apply bg-lush-green;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
