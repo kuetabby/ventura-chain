@@ -1,6 +1,7 @@
 import { useMemo, useRef } from "react";
 import { usePathname } from "next/navigation";
 import {
+  Button,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -21,6 +22,8 @@ import useHash from "@/hooks/useHashname";
 
 import "../style.css";
 import "./style.css";
+import Link from "next/link";
+import { DollarOutlined, LineChartOutlined } from "@ant-design/icons";
 
 interface Props {
   isOpen: boolean;
@@ -55,7 +58,7 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
         name: "FEATURES",
       },
       {
-        href: "/whitepaper",
+        href: "https://ventura-chain.gitbook.io/ventura/",
         pathname: `/whitepaper`,
         name: "WHITEPAPER",
       },
@@ -91,6 +94,22 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
                 ? hashname === item.pathname
                 : !defaultHash && pathname === item.pathname;
 
+              if (item.pathname === "/whitepaper") {
+                return (
+                  <ListItem key={item.name} onClick={onClose}>
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="nav-anchor"
+                    >
+                      {item.name}
+                    </Link>
+                  </ListItem>
+                );
+              }
+
               return (
                 <ListItem key={item.name} onClick={onClose}>
                   <Anchor
@@ -111,19 +130,34 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
             })}
           </List>
         </DrawerBody>
-        <DrawerFooter className="bg-dark-main">
-          {/* {isDappPath ? (
-            <ConnectWallet
-              className="!w-full"
-              hideTestnetFaucet
-              btnTitle="Connect"
-              modalTitleIconUrl={AppLogoTransparent.src}
-            />
-          ) : (
-            <Link href="/dapp/stake" className="w-full">
-              <Button className="tw-connect-wallet w-full">Launch dApp</Button>
-            </Link>
-          )} */}
+        <DrawerFooter className="bg-dark-main flex justify-between">
+          <Link
+            href="/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-auto mr-4"
+          >
+            <Button
+              className="w-full bg-olive-green hover:bg-mint-green active:bg-mint-green focus:bg-mint-green text-white"
+              leftIcon={<DollarOutlined style={{ fontSize: "1.5em" }} />}
+            >
+              Buy Now!
+            </Button>
+          </Link>
+
+          <Link
+            href="/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-auto"
+          >
+            <Button
+              className="w-full bg-lush-green hover:bg-forest-green active:bg-forest-green focus:bg-forest-green text-white"
+              leftIcon={<LineChartOutlined style={{ fontSize: "1.5em" }} />}
+            >
+              Chart
+            </Button>
+          </Link>
         </DrawerFooter>
       </DrawerContent>
     </Drawer>

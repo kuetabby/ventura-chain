@@ -10,6 +10,7 @@ import useHash from "@/hooks/useHashname";
 import { getHash } from "@/utils/hash";
 
 import "./style.css";
+import Link from "next/link";
 
 interface Props {
   containterClass: string;
@@ -41,7 +42,7 @@ const PageTabs: React.FC<Props> = ({ containterClass }) => {
         name: "FEATURES",
       },
       {
-        href: "/whitepaper",
+        href: "https://ventura-chain.gitbook.io/ventura/",
         pathname: `/whitepaper`,
         name: "WHITEPAPER",
       },
@@ -63,6 +64,20 @@ const PageTabs: React.FC<Props> = ({ containterClass }) => {
         const isActive = !!defaultHash
           ? hashname === item.pathname
           : !defaultHash && pathname === item.pathname;
+
+        if (item.pathname === "/whitepaper") {
+          return (
+            <Link
+              key={item.name}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-anchor"
+            >
+              {item.name}
+            </Link>
+          );
+        }
 
         // const isActive = pathname === item.pathname;
         return (

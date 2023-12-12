@@ -103,7 +103,7 @@ const Navbar: React.FC<Props> = () => {
         </div>
 
         {/* small devices */}
-        <div className="md:hidden flex justify-center w-1/2 sm:w-2/3 text-center text-3xl font-extrabold">
+        <div className="small-title">
           Ventura <span className="hidden sm:block ml-3">Chain</span>
         </div>
         <div className="md:hidden w-1/4 text-right animate-fadeInBasic">

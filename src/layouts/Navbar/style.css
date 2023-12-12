@@ -44,6 +44,13 @@
   @apply flex cursor-pointer w-full sm:w-auto;
 }
 
+.small-title {
+  @apply md:hidden flex justify-center w-1/2 sm:w-2/3 text-center text-3xl font-extrabold bg-mint-green;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* @media (min-width: theme("screens.sm")) {
   .logo-container {
     margin-right: 0.75rem;
