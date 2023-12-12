@@ -178,12 +178,16 @@ const Home: React.FC<Props> = () => {
             secure and controlled ecosystem */}
           </CardBody>
           <CardFooter className="pt-0">
-            <Link href="/" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://explorer.ventura-chain.tech"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 rightIcon={<ArrowRightOutlined />}
                 className="text-white bg-lush-green hover:bg-forest-green active:bg-forest-green focus:bg-forest-green"
               >
-                Learn More
+                Let's go!
               </Button>
             </Link>
           </CardFooter>
@@ -202,12 +206,16 @@ const Home: React.FC<Props> = () => {
             environment */}
           </CardBody>
           <CardFooter className="pt-0">
-            <Link href="/" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://swap.ventura-chain.tech"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 rightIcon={<ArrowRightOutlined />}
                 className="text-white bg-lush-green hover:bg-forest-green active:bg-forest-green focus:bg-forest-green"
               >
-                Learn More
+                Let's go!
               </Button>
             </Link>
           </CardFooter>
@@ -229,12 +237,16 @@ const Home: React.FC<Props> = () => {
             environment */}
           </CardBody>
           <CardFooter className="pt-0">
-            <Link href="/" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://audit.ventura-chain.tech"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 rightIcon={<ArrowRightOutlined />}
                 className="text-white bg-lush-green hover:bg-forest-green active:bg-forest-green focus:bg-forest-green"
               >
-                Learn More
+                Let's go!
               </Button>
             </Link>
           </CardFooter>
@@ -256,11 +268,10 @@ const Home: React.FC<Props> = () => {
           </CardBody>
           <CardFooter className="pt-0">
             <Button
-              isDisabled
               rightIcon={<ArrowRightOutlined />}
               className="text-white bg-lush-green hover:bg-forest-green active:bg-forest-green focus:bg-forest-green disabled:forest-green"
             >
-              Learn More
+              Let's go!
             </Button>
           </CardFooter>
         </Card>
