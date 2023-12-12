@@ -239,7 +239,7 @@ const Home: React.FC<Props> = () => {
             </Link>
           </CardFooter>
         </Card>
-        <Card className="bg-transparent border border-white w-full sm:w-[47.5%] xl:w-[23.5%] mb-3 xl:mb-0 opacity-50">
+        <Card className="bg-transparent border border-white w-full sm:w-[47.5%] xl:w-[23.5%] mb-3 xl:mb-0">
           <CardHeader className="text-green-500  font-semibold text-lg sm:text-2xl">
             Ventura Mainnet
           </CardHeader>
