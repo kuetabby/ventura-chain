@@ -25,8 +25,8 @@ import "./style.css";
 
 interface Props {}
 
-const contractAddress = process.env.NEXT_PUBLIC_VENTURA_CONTRACT_ADDRESS ?? "-";
-const pairAddress = process.env.NEXT_PUBLIC_VENTURA_CONTRACT_ADDRESS ?? "-";
+const contractAddress = process.env.NEXT_PUBLIC_VENTURA_CONTRACT_ADDRESS;
+const pairAddress = process.env.NEXT_PUBLIC_VENTURA_CONTRACT_ADDRESS;
 
 const Home: React.FC<Props> = () => {
   const [isVisionVisible, setIsVisionVisible] = useState(false);
