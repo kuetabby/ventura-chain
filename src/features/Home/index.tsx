@@ -187,20 +187,25 @@ const Home: React.FC<Props> = () => {
                 rightIcon={<ArrowRightOutlined />}
                 className="text-white bg-lush-green hover:bg-forest-green active:bg-forest-green focus:bg-forest-green"
               >
-                Let's go!
+                Learn more!
               </Button>
             </Link>
           </CardFooter>
         </Card>
         <Card className="bg-transparent border border-white w-full sm:w-[47.5%] xl:w-[23.5%] mb-3 xl:mb-0">
           <CardHeader className="text-green-500  font-semibold text-lg sm:text-2xl">
-            Ventura Dex Swap
+            Ventura Swap
           </CardHeader>
           <CardBody className="text-white pt-0">
-            The Ventura DEX Swap introduces a seamless and secure decentralized
+            The Ventura Testnet Swap introduces a seamless and secure exchange
+            mechanism within the Ventura Chain ecosystem. Utilizing advanced
+            technology, this innovative feature allows users to effortlessly
+            swap various digital assets in the testnet environment, ensuring
+            enhanced privacy and efficiency during the testing phase.
+            {/* The Ventura DEX Swap introduces a seamless and secure decentralized
             exchange within the Ventura Chain ecosystem. Powered by cutting-edge
             technology, this innovative feature enables users to effortlessly
-            swap various digital assets with enhanced privacy and efficiency.
+            swap various digital assets with enhanced privacy and efficiency. */}
             {/* Experience swift transactions, transparent processes, and greater
             control over your assets, all within the Ventura DEX Swap
             environment */}
@@ -215,7 +220,7 @@ const Home: React.FC<Props> = () => {
                 rightIcon={<ArrowRightOutlined />}
                 className="text-white bg-lush-green hover:bg-forest-green active:bg-forest-green focus:bg-forest-green"
               >
-                Let's go!
+                Learn more!
               </Button>
             </Link>
           </CardFooter>
@@ -246,7 +251,7 @@ const Home: React.FC<Props> = () => {
                 rightIcon={<ArrowRightOutlined />}
                 className="text-white bg-lush-green hover:bg-forest-green active:bg-forest-green focus:bg-forest-green"
               >
-                Let's go!
+                Learn more!
               </Button>
             </Link>
           </CardFooter>
@@ -271,7 +276,7 @@ const Home: React.FC<Props> = () => {
               rightIcon={<ArrowRightOutlined />}
               className="text-white bg-lush-green hover:bg-forest-green active:bg-forest-green focus:bg-forest-green disabled:forest-green"
             >
-              Let's go!
+              Learn more!
             </Button>
           </CardFooter>
         </Card>
