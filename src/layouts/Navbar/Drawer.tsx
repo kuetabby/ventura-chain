@@ -30,8 +30,8 @@ interface Props {
   onClose: () => void;
 }
 
-const contractAddress = process.env.NEXT_PUBLIC_VENTURA_CONTRACT_ADDRESS;
-const pairAddress = process.env.NEXT_PUBLIC_VENTURA_CONTRACT_ADDRESS;
+const contractAddress = "0x016c4225ae87FEC52A5230158fb9dF7f93B87921";
+const pairAddress = "-";
 
 export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
   const btnRef = useRef() as any;

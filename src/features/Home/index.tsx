@@ -16,6 +16,8 @@ import {
   SearchOutlined,
 } from "@ant-design/icons";
 
+import { useIsMounted } from "@/hooks/useIsMounted";
+
 import Solidproof from "@/assets/solidproof.png";
 import Dextools from "@/assets/dextools.png";
 import Dexscreener from "@/assets/dexscreener.png";
@@ -25,8 +27,8 @@ import "./style.css";
 
 interface Props {}
 
-const contractAddress = process.env.NEXT_PUBLIC_VENTURA_CONTRACT_ADDRESS;
-const pairAddress = process.env.NEXT_PUBLIC_VENTURA_CONTRACT_ADDRESS;
+const contractAddress = "0x016c4225ae87FEC52A5230158fb9dF7f93B87921";
+const pairAddress = "-";
 
 const Home: React.FC<Props> = () => {
   const [isVisionVisible, setIsVisionVisible] = useState(false);
@@ -35,23 +37,33 @@ const Home: React.FC<Props> = () => {
   const visionRef = useRef<HTMLDivElement | null>(null);
   const featuresRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      setIsVisionVisible(entry.isIntersecting);
-    });
-
-    observer.observe(visionRef.current as HTMLDivElement);
-  }, []);
+  const isMounted = useIsMounted();
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      setIsFeaturesVisible(entry.isIntersecting);
-    });
+    if (isMounted) {
+      const observer = new IntersectionObserver((entries) => {
+        const entry = entries[0];
+        setIsVisionVisible(entry.isIntersecting);
+      });
 
-    observer.observe(featuresRef.current as HTMLDivElement);
-  }, []);
+      observer.observe(visionRef.current as HTMLDivElement);
+    }
+  }, [isMounted]);
+
+  useEffect(() => {
+    if (isMounted) {
+      const observer = new IntersectionObserver((entries) => {
+        const entry = entries[0];
+        setIsFeaturesVisible(entry.isIntersecting);
+      });
+
+      observer.observe(featuresRef.current as HTMLDivElement);
+    }
+  }, [isMounted]);
+
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <div className="homepage-container">
@@ -106,7 +118,7 @@ const Home: React.FC<Props> = () => {
           href={`https://app.uniswap.org/tokens/ethereum/${contractAddress}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full sm:w-[22.5%] my-2 sm:my-0 h-16"
+          className="w-full sm:w-[30%] my-2 sm:my-0 h-16"
         >
           <Image
             src={Uniswap}
@@ -115,10 +127,10 @@ const Home: React.FC<Props> = () => {
           />
         </Link>
         <Link
-          href="/"
+          href="https://app.solidproof.io/projects/ventura"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full sm:w-[22.5%] mb-2 sm:mb-0 h-16"
+          className="w-full sm:w-[30%] mb-2 sm:mb-0 h-16"
         >
           <Image
             src={Solidproof}
@@ -130,22 +142,10 @@ const Home: React.FC<Props> = () => {
           href={`http://dextools.io/app/ether/pair-explorer/${pairAddress}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full sm:w-[22.5%] my-2 sm:my-0 h-[20vw] xs:h-[15vw] sm:h-full"
+          className="w-full sm:w-[30%] my-2 sm:my-0 h-[20vw] xs:h-[15vw] sm:h-full"
         >
           <Image
             src={Dextools}
-            alt="dextools"
-            className="object-contain w-full h-full"
-          />
-        </Link>
-        <Link
-          href={`https://dexscreener.com/ethereum/${contractAddress}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full sm:w-[22.5%] h-20"
-        >
-          <Image
-            src={Dexscreener}
             alt="dextools"
             className="object-contain w-full h-full"
           />
