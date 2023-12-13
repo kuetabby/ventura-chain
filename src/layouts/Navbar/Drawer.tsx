@@ -31,7 +31,7 @@ interface Props {
 }
 
 const contractAddress = "0x016c4225ae87FEC52A5230158fb9dF7f93B87921";
-const pairAddress = "-";
+const pairAddress = "0x1e053b6d2f0a578505bfd8bfe344295a9a08bbd2";
 
 export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
   const btnRef = useRef() as any;
