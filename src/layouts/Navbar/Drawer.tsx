@@ -1,4 +1,5 @@
 import { useMemo, useRef } from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   Button,
@@ -12,6 +13,7 @@ import {
   List,
   ListItem,
 } from "@chakra-ui/react";
+import { DollarOutlined, LineChartOutlined } from "@ant-design/icons";
 import clsx from "clsx";
 
 import Anchor from "@/components/Anchor";
@@ -22,13 +24,14 @@ import useHash from "@/hooks/useHashname";
 
 import "../style.css";
 import "./style.css";
-import Link from "next/link";
-import { DollarOutlined, LineChartOutlined } from "@ant-design/icons";
 
 interface Props {
   isOpen: boolean;
   onClose: () => void;
 }
+
+const contractAddress = process.env.NEXT_PUBLIC_VENTURA_CONTRACT_ADDRESS ?? "-";
+const pairAddress = process.env.NEXT_PUBLIC_VENTURA_CONTRACT_ADDRESS ?? "-";
 
 export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
   const btnRef = useRef() as any;
@@ -132,7 +135,7 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
         </DrawerBody>
         <DrawerFooter className="bg-dark-main flex justify-between">
           <Link
-            href="/"
+            href={`https://app.uniswap.org/tokens/ethereum/${contractAddress}`}
             target="_blank"
             rel="noopener noreferrer"
             className="w-auto mr-4"
@@ -146,7 +149,7 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
           </Link>
 
           <Link
-            href="/"
+            href={`http://dextools.io/app/ether/pair-explorer/${pairAddress}`}
             target="_blank"
             rel="noopener noreferrer"
             className="w-auto"

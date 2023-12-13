@@ -1,12 +1,5 @@
 "use client";
 import React, { PropsWithChildren } from "react";
-import {
-  ThirdwebProvider,
-  coinbaseWallet,
-  metamaskWallet,
-  trustWallet,
-  walletConnect,
-} from "@thirdweb-dev/react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ChakraProvider } from "@chakra-ui/react";
 import { CacheProvider } from "@chakra-ui/next-js";
@@ -42,18 +35,7 @@ const Provider: React.FC<Props> = ({ children }) => {
         toastOptions={{ defaultOptions: { duration: 3000, isClosable: true } }}
       >
         <QueryClientProvider client={queryClient}>
-          <ThirdwebProvider
-            activeChain="ethereum"
-            clientId={THIRDWEB_KEY}
-            supportedWallets={[
-              metamaskWallet(),
-              trustWallet(),
-              coinbaseWallet(),
-              walletConnect(),
-            ]}
-          >
-            {children}
-          </ThirdwebProvider>
+          {children}
         </QueryClientProvider>
       </ChakraProvider>
     </CacheProvider>

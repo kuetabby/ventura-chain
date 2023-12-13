@@ -21,6 +21,9 @@ import "./style.css";
 
 interface Props {}
 
+const contractAddress = process.env.NEXT_PUBLIC_VENTURA_CONTRACT_ADDRESS ?? "-";
+const pairAddress = process.env.NEXT_PUBLIC_VENTURA_CONTRACT_ADDRESS ?? "-";
+
 const Navbar: React.FC<Props> = () => {
   const {
     isOpen: isScroll,
@@ -74,7 +77,7 @@ const Navbar: React.FC<Props> = () => {
           className={clsx("!hidden md:!flex justify-end w-1/3 font-semibold")}
         >
           <Link
-            href="/"
+            href={`https://app.uniswap.org/tokens/ethereum/${contractAddress}`}
             target="_blank"
             rel="noopener noreferrer"
             className="w-auto mr-4"
@@ -88,7 +91,7 @@ const Navbar: React.FC<Props> = () => {
           </Link>
 
           <Link
-            href="/"
+            href={`http://dextools.io/app/ether/pair-explorer/${pairAddress}`}
             target="_blank"
             rel="noopener noreferrer"
             className="w-auto"
