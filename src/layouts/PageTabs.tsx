@@ -42,8 +42,8 @@ const PageTabs: React.FC<Props> = ({ containterClass }) => {
         name: "COMMUNITY",
       },
       {
-        href: "/explore",
-        pathname: `/explore`,
+        href: "https://app.venturadao.xyz/",
+        pathname: `https://app.venturadao.xyz/`,
         name: "EXPLORE",
       },
     ];
