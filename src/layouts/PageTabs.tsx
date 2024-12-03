@@ -37,14 +37,14 @@ const PageTabs: React.FC<Props> = ({ containterClass }) => {
         name: "ABOUT US",
       },
       {
-        href: "#features",
-        pathname: `#features`,
-        name: "FEATURES",
+        href: "/",
+        pathname: `/`,
+        name: "COMMUNITY",
       },
       {
-        href: "https://ventura-chain.gitbook.io/ventura/",
-        pathname: `/whitepaper`,
-        name: "WHITEPAPER",
+        href: "/explore",
+        pathname: `/explore`,
+        name: "EXPLORE",
       },
     ];
   }, []);
@@ -56,7 +56,7 @@ const PageTabs: React.FC<Props> = ({ containterClass }) => {
   return (
     <div
       className={clsx(
-        "w-full md:w-3/4 lg:w-3/5 xl:w-1/2 justify-between",
+        "w-full md:w-2/3 lg:w-1/2 xl:w-1/3 justify-between",
         containterClass
       )}
     >

@@ -27,8 +27,8 @@ import "./style.css";
 
 interface Props {}
 
-const contractAddress = "0x016c4225ae87FEC52A5230158fb9dF7f93B87921";
-const pairAddress = "0x1e053b6d2f0a578505bfd8bfe344295a9a08bbd2";
+const contractAddress = "-";
+// const pairAddress = "0x1e053b6d2f0a578505bfd8bfe344295a9a08bbd2";
 
 const Home: React.FC<Props> = () => {
   const [isVisionVisible, setIsVisionVisible] = useState(false);
@@ -82,8 +82,9 @@ const Home: React.FC<Props> = () => {
         <div
           className={`w-full sm:w-4/5 lg:w-2/3 text-xl xs:text-3xl sm:text-4xl font-extrabold animate-typingBasic`}
         >
-          Ventura Chain revolutionizes transactions with a streamlined,
-          accessible blockchain fostering decentralization and inclusivity.
+          Ventura DAO transforms digital interactions by combining advanced AI
+          with a decentralized framework, promoting adaptability, user-centric
+          functionality, and inclusivity
         </div>
         <div className="mt-4 text-sm sm:text-base">{contractAddress}</div>
 
@@ -106,13 +107,14 @@ const Home: React.FC<Props> = () => {
         Our Vision
       </h1>
       <div className="w-full md:w-10/12 lg:w-2/3 xl:w-1/2 text-lg xs:text-xl sm:text-2xl font-bold mt-3">
-        By leveraging a decentralized framework, Ventura aims to dismantle the
-        hierarchies of control that traditionally govern societies. Ventura
-        envisions a future where transparency is not just a feature but a
-        fundamental principle guiding interactions.
+        Driven by innovation and inclusivity, we aim to bridge the gap between
+        human and digital communication, enabling smarter, more personalized
+        engagements. Through adaptability and continuous improvement, Ventura
+        DAO seeks to lead the future of conversational AI, making it accessible
+        to all.
       </div>
 
-      <div className="h-20 lg:h-24" />
+      {/* <div className="h-20 lg:h-24" />
       <div className="w-full sm:w-3/4 flex flex-wrap justify-between items-center relative px-2 mx-auto">
         <Link
           href={`https://app.uniswap.org/tokens/ethereum/${contractAddress}`}
@@ -150,7 +152,7 @@ const Home: React.FC<Props> = () => {
             className="object-contain w-full h-full"
           />
         </Link>
-      </div>
+      </div> */}
 
       <div id="features" className="h-20 sm:h-24" />
       <h1
@@ -159,9 +161,26 @@ const Home: React.FC<Props> = () => {
           isFeaturesVisible && "animate-slideInTopBasic"
         }`}
       >
-        EXPERIENCE VENTURA CHAIN: A JOURNEY THROUGH INNOVATIVE FEATURES
+        Experience Ventura DAO: Redefining Conversational AI Through Innovative
+        Features
       </h1>
-      <div className="w-full md:w-11/12 flex flex-wrap justify-between mx-auto my-10">
+
+      <div className="my-10" />
+      <h1
+        ref={visionRef}
+        className={`vision-title text-center ${
+          isVisionVisible && "animate-slideInTopBasic"
+        }`}
+      >
+        Conversational Intelligence Redefined
+      </h1>
+      <div className="w-full md:w-10/12 lg:w-2/3 xl:w-1/2 text-lg xs:text-xl sm:text-2xl font-bold mt-3 mx-auto text-center">
+        A conceptual tool designed to elevate user interactions through advanced
+        conversational AI. Whether integrated into products, platforms, or
+        services, this feature harnesses AI to deliver seamless communication,
+        intelligent automation, and unmatched support
+      </div>
+      {/* <div className="w-full md:w-11/12 flex flex-wrap justify-between mx-auto my-10">
         <Card className="bg-transparent border border-white w-full sm:w-[47.5%] xl:w-[23.5%] mb-3 xl:mb-0">
           <CardHeader className="text-green-500  font-semibold text-lg sm:text-2xl">
             Ventura Testnet
@@ -172,10 +191,6 @@ const Home: React.FC<Props> = () => {
             and performance. This PoA-based Testnet offers a trusted and
             efficient environment for testing and validating blockchain
             functionalities.
-            {/* With designated authorities validating
-            transactions, Ventura's Testnet maintains stability, allowing
-            developers and users to experiment, refine, and innovate within a
-            secure and controlled ecosystem */}
           </CardBody>
           <CardFooter className="pt-0">
             <Link
@@ -202,13 +217,6 @@ const Home: React.FC<Props> = () => {
             technology, this innovative feature allows users to effortlessly
             swap various digital assets in the testnet environment, ensuring
             enhanced privacy and efficiency during the testing phase.
-            {/* The Ventura DEX Swap introduces a seamless and secure decentralized
-            exchange within the Ventura Chain ecosystem. Powered by cutting-edge
-            technology, this innovative feature enables users to effortlessly
-            swap various digital assets with enhanced privacy and efficiency. */}
-            {/* Experience swift transactions, transparent processes, and greater
-            control over your assets, all within the Ventura DEX Swap
-            environment */}
           </CardBody>
           <CardFooter className="pt-0">
             <Link
@@ -235,11 +243,6 @@ const Home: React.FC<Props> = () => {
             within the blockchain ecosystem. These tools enable comprehensive
             audits and verifications of smart contracts, transactions, and
             tokens circulating within the Ventura Chain.
-            {/* Offering real-time
-            insights and analysis, Ventura's audit tools and scanners empower
-            users with the ability to validate and secure their assets,
-            providing a robust layer of assurance and trust in the decentralized
-            environment */}
           </CardBody>
           <CardFooter className="pt-0">
             <Link
@@ -267,9 +270,6 @@ const Home: React.FC<Props> = () => {
             validate transactions, the PoA-based Mainnet maintains efficiency
             and security, facilitating swift and secure transactions while
             upholding network integrity.
-            {/* This PoA consensus model on Ventura's
-            Mainnet fosters a reliable and predictable environment for users to
-            engage in secure transactions and decentralized applications */}
           </CardBody>
           <CardFooter className="pt-0">
             <Button
@@ -280,7 +280,8 @@ const Home: React.FC<Props> = () => {
             </Button>
           </CardFooter>
         </Card>
-      </div>
+      </div> */}
+      <div className="h-20 sm:h-24" />
     </div>
   );
 };

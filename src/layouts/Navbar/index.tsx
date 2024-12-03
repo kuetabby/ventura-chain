@@ -21,8 +21,8 @@ import "./style.css";
 
 interface Props {}
 
-const contractAddress = "0x016c4225ae87FEC52A5230158fb9dF7f93B87921";
-const pairAddress = "0x1e053b6d2f0a578505bfd8bfe344295a9a08bbd2";
+const contractAddress = "-";
+// const pairAddress = "0x1e053b6d2f0a578505bfd8bfe344295a9a08bbd2";
 
 const Navbar: React.FC<Props> = () => {
   const {
@@ -77,7 +77,7 @@ const Navbar: React.FC<Props> = () => {
           className={clsx("!hidden md:!flex justify-end w-1/3 font-semibold")}
         >
           <Link
-            href={`https://app.uniswap.org/tokens/ethereum/${contractAddress}`}
+            href={`https://pump.fun/coin/${contractAddress}`}
             target="_blank"
             rel="noopener noreferrer"
             className="w-auto mr-4"
@@ -91,7 +91,7 @@ const Navbar: React.FC<Props> = () => {
           </Link>
 
           <Link
-            href={`http://dextools.io/app/ether/pair-explorer/${pairAddress}`}
+            href={`https://dexscreener.com/solana/${contractAddress}`}
             target="_blank"
             rel="noopener noreferrer"
             className="w-auto"

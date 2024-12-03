@@ -30,8 +30,8 @@ interface Props {
   onClose: () => void;
 }
 
-const contractAddress = "0x016c4225ae87FEC52A5230158fb9dF7f93B87921";
-const pairAddress = "0x1e053b6d2f0a578505bfd8bfe344295a9a08bbd2";
+const contractAddress = "-";
+// const pairAddress = "0x1e053b6d2f0a578505bfd8bfe344295a9a08bbd2";
 
 export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
   const btnRef = useRef() as any;
@@ -56,14 +56,14 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
         name: "ABOUT US",
       },
       {
-        href: "#features",
-        pathname: `#features`,
-        name: "FEATURES",
+        href: "/",
+        pathname: `/`,
+        name: "COMMUNITY",
       },
       {
-        href: "https://ventura-chain.gitbook.io/ventura/",
-        pathname: `/whitepaper`,
-        name: "WHITEPAPER",
+        href: "/explore",
+        pathname: `/explore`,
+        name: "EXPLORE",
       },
     ];
   }, []);
@@ -135,7 +135,7 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
         </DrawerBody>
         <DrawerFooter className="bg-dark-main flex justify-between">
           <Link
-            href={`https://app.uniswap.org/tokens/ethereum/${contractAddress}`}
+            href={`https://pump.fun/coin/${contractAddress}`}
             target="_blank"
             rel="noopener noreferrer"
             className="w-auto mr-4"
@@ -149,7 +149,7 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
           </Link>
 
           <Link
-            href={`http://dextools.io/app/ether/pair-explorer/${pairAddress}`}
+            href={`https://dexscreener.com/solana/${contractAddress}`}
             target="_blank"
             rel="noopener noreferrer"
             className="w-auto"

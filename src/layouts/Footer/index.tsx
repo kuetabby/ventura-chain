@@ -25,28 +25,24 @@ const AppFooter: React.FC<Props> = () => {
     <footer className={clsx("app-footer bg-dark-primary")}>
       <div className="app-footer-wrapper">
         <div className="w-full flex flex-wrap items-center sm:justify-end mb-2">
-          <Link
+          {/* <Link
             href="mailto:venturaerc20@ventura-chain.tech"
             rel="noopener noreferrer"
             className="app-footer-email"
           >
             venturaerc20@ventura-chain.tech
-          </Link>
+          </Link> */}
 
           <div className="w-full xs:w-1/2 flex sm:justify-end">
             <Link
-              href="https://twitter.com/VenturaERC20"
+              href="https://twitter.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-auto hover:text-green-500"
+              className="w-auto hover:text-green-500 mr-1"
             >
-              <Image
-                src={TwitterLogo}
-                alt="tw-logo"
-                className="w-10 lg:w-8 h-10 lg:h-8"
-              />
+              <Image src={TwitterLogo} alt="tw-logo" className="w-8 lg:w-8" />
             </Link>
-            <Link
+            {/* <Link
               href="https://medium.com/@venturaerc20"
               target="_blank"
               rel="noopener noreferrer"
@@ -55,32 +51,32 @@ const AppFooter: React.FC<Props> = () => {
               <Image
                 src={MediumLogo}
                 alt="dc-logo"
-                className="w-10 lg:w-8 h-10 lg:h-8 !rounded-full"
+                className="w-10 lg:w-8 !rounded-full"
               />
-            </Link>
+            </Link> */}
             <Link
-              href="https://t.me/VenturaERC20"
+              href="https://t.me/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-auto hover:text-green-500"
+              className="w-auto hover:text-green-500 ml-1"
             >
               <Image
                 src={TelegramLogo}
                 alt="tele-logo"
-                className="w-10 lg:w-8 h-10 lg:h-8"
+                className="w-7 lg:w-7"
               />
             </Link>
           </div>
         </div>
 
         <div className="all-reserved">
-          <div className="app-footer-title">Ventura Chain</div>
+          <div className="app-footer-title">Ventura DAO</div>
 
-          <div className="w-full sm:w-3/5 flex sm:justify-end items-center my-2">
+          <div className="w-full sm:w-3/5 flex sm:justify-end items-center my-2 text-white">
             <div className="sm:ml-2 text-xs font-semibold">
               Copyright{" "}
               <CopyrightOutlined className="mx-1" style={{ fontSize: "1em" }} />{" "}
-              2023. All rights reserved.
+              2024. All rights reserved.
             </div>
           </div>
         </div>

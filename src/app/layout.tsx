@@ -5,10 +5,11 @@ import BaseLayout from "@/layouts";
 
 import "./globals.css";
 
-const app_title = "Ventura Chain - Your Gateway to Decentralized Innovation!";
+const app_title =
+  "Ventura DAO - Your Portal to Revolutionary Conversational AI!";
 const app_name = "Ventura";
 const description =
-  "Discover the power of Ventura Chain's decentralized ecosystem with our user-centric app. Seamlessly transact, engage transparently, and drive digital innovation. Explore the inclusive realm of Ventura's blockchain with the Ventura Chain today!";
+  "Experience the power of Ventura DAO's user-centric platform. Seamlessly interact, engage transparently, and drive innovation with advanced conversational AI. Explore the inclusive world of Ventura DAO today!";
 
 export const metadata: Metadata = {
   title: app_title,
