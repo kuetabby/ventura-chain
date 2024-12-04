@@ -35,7 +35,7 @@ const AppFooter: React.FC<Props> = () => {
 
           <div className="w-full xs:w-1/2 flex sm:justify-end">
             <Link
-              href="https://twitter.com/"
+              href="https://x.com/ventura_dao"
               target="_blank"
               rel="noopener noreferrer"
               className="w-auto hover:text-green-500 mr-1"
@@ -55,7 +55,7 @@ const AppFooter: React.FC<Props> = () => {
               />
             </Link> */}
             <Link
-              href="https://t.me/"
+              href="https://t.me/VenturaPortal"
               target="_blank"
               rel="noopener noreferrer"
               className="w-auto hover:text-green-500 ml-1"

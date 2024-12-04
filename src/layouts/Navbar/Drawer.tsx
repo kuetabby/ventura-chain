@@ -56,8 +56,8 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
         name: "ABOUT US",
       },
       {
-        href: "/",
-        pathname: `/`,
+        href: "https://t.me/VenturaPortal",
+        pathname: `https://t.me/VenturaPortal`,
         name: "COMMUNITY",
       },
       {

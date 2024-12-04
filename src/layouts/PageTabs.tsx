@@ -37,8 +37,8 @@ const PageTabs: React.FC<Props> = ({ containterClass }) => {
         name: "ABOUT US",
       },
       {
-        href: "/",
-        pathname: `/`,
+        href: "https://t.me/VenturaPortal",
+        pathname: `https://t.me/VenturaPortal`,
         name: "COMMUNITY",
       },
       {
