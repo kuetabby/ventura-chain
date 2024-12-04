@@ -27,7 +27,7 @@ import "./style.css";
 
 interface Props {}
 
-const contractAddress = "-";
+const contractAddress = "GizMkhTQzVhicwbmPHLfmrWesg3c4acqbxFyjdfFpump";
 // const pairAddress = "0x1e053b6d2f0a578505bfd8bfe344295a9a08bbd2";
 
 const Home: React.FC<Props> = () => {
